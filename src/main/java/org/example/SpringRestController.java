@@ -13,6 +13,6 @@ public class SpringRestController {
     @GetMapping("/connect")
     public String connect() {
         System.out.println("connected to spring boot");
-        return "connected";
+        return "connected!";
     }
 }
