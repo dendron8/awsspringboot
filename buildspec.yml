@@ -6,4 +6,4 @@ phases:
       - gradle clean build
 artifacts:
   files:
-    - build/libs/*
+    - build/libs/TestSpringBoot-0.1.jar
