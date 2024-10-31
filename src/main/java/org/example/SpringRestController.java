@@ -12,7 +12,7 @@ public class SpringRestController {
 
     @GetMapping("/connect")
     public String connect() {
-        System.out.println("connected to spring boot");
+        System.out.println("connected to spring boot!");
         return "This page is the result of an application that was deployed with " +
                 "the following flow:" +
                 "1. code pushed to https://github.com/dendron8/awsspringboot" +
