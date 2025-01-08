@@ -1,5 +1,7 @@
 package org.example;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringRestController {
 
+    private static final Logger log = LoggerFactory.getLogger(SpringRestController.class);
+
     @GetMapping("/connect")
     public String connect() {
+        log.info("got in connect");
         System.out.println("connected to spring boot!");
         return "This page is the result of an application that was deployed with " +
                 "the following flow:" +
