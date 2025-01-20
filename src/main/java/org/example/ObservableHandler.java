@@ -1,19 +1,18 @@
 package org.example;
 
-import io.micrometer.common.KeyValue;
 import io.micrometer.observation.Observation;
 import io.micrometer.observation.ObservationHandler;
+import io.micrometer.common.KeyValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.StreamSupport;
 
-// Example of plugging in a custom handler that in this case will print a statement before and after all observations take place
 @Component
-class MyHandler implements ObservationHandler<Observation.Context> {
+public class ObservableHandler implements ObservationHandler<Observation.Context> {
 
-    private static final Logger log = LoggerFactory.getLogger(MyHandler.class);
+    private static final Logger log = LoggerFactory.getLogger(ObservableHandler.class);
 
     @Override
     public void onStart(Observation.Context context) {
